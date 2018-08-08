@@ -9,6 +9,12 @@ namespace MailBounceDetector.Tests
     public class BounceDetectorTests
     {
         [Fact]
+        public void FailOnPurpose()
+        {
+            Assert.False(true);
+        }
+
+        [Fact]
         public void NonBouncePostfix()
         {
             var message = MimeMessage.Load(OpenFixture("non_bounce_postfix_hello_world.eml"));
